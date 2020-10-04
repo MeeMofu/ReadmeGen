@@ -1,25 +1,35 @@
-# kldjasjdsa
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+# README Generator example
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of content
 
-* [Description](#Description)
-* [License](#License)
+* [Description](#description)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
 * [Questions](#questions)
 
 
 ## Description
 
-asasdasdawdawdsaddddddddd
+This is a quick show case of the README that this program generate. This program will automatically generate table of content and its appropriate sections. Unrequired fields can be left empty and will not be included. In this example, the Installation and Tests are not included
+
+## Usage
+
+Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.
+
+## Contributing
+
+Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.
 
 ## License
 
-This program is covered under GNU GPLv3
+This program is covered under MIT License
 
 ## Questions
 
-Email link: asdsadsd
+GitHub link: https://github.com/MeeMofu
 
-wwewee
+Extra contact info and/or instructions can be provided right here for users
 
 

@@ -1,7 +1,26 @@
 const returnLicence = require ('../utils/licenceLookup')
 
+const exampleCase = {
+  name: 'README Generator example',
+  sections: [
+    [ 'Description', 'This is a quick show case of the README that this program generate. This program will automatically generate table of content and its appropriate sections. Unrequired fields can be left empty and will not be included. In this example, the Installation and Tests are not included ' ],
+    [ 'Usage', 'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.' ],
+    [ 'Contributing', 'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.' ],
+    [ 'License', 'MIT License' ]
+  ],
+  contact: {
+    github: 'MeeMofu',
+    info: 'Extra contact info and/or instructions can be provided right here for users'
+  }
+}
+
 // function to generate markdown for README
 function generateMarkdown({name,sections,contact}) {
+  if (name === 'Test Case'){
+    name = exampleCase.name;
+    sections = exampleCase.sections;
+    contact = exampleCase.contact;
+  }
   const badge = returnLicence(sections[sections.length-1][1])
   const createTable = ()=>{
     let table = sections.map(section => `* [${section[0]}](#${section[0].toLowerCase()})`)
