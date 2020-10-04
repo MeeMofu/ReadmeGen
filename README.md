@@ -33,7 +33,7 @@ To run the program, call the index.js file in the terminal like so
  
     node index.js
 
-Then just follow the prompt to input the fields for your custom READE
+Then just follow the prompt to input the fields for your custom README. Your custom generated README can be found in 'dist' folder.
 
 ## Tests
 
