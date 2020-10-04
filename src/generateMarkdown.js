@@ -2,6 +2,7 @@ const returnLicence = require ('../utils/licenceLookup')
 
 // function to generate markdown for README
 function generateMarkdown({name,sections,contact}) {
+  const badge = returnLicence(sections[sections.length-1][1])
   const createTable = ()=>{
     let table = sections.map(section => `* [${section[0]}](#${section[0].toLowerCase()})`)
       .join('\n');
@@ -19,10 +20,31 @@ function generateMarkdown({name,sections,contact}) {
 
       ${content[1]}
     `).join('')
+
+    // License and Questions content
+    mainContent += `
+      ## License
+
+      This program is covered under ${sections[sections.length-1][1]}
+    `
+
+    // Once again, checking for non empty field
+    if (contact) {
+      mainContent += `
+        ## Questions
+
+      `
+      if (contact.github) mainContent += `GitHub link: https://github.com/${contact.github}\n\n`;
+      if (contact.email) mainContent += `Email link: ${contact.email}\n\n`;
+      if (contact.info) mainContent += `${contact.info}\n\n`;
+
+    }
+
     return mainContent;
   }
 
   const Markdown = `# ${name}
+  ${badge}
   
   ## Table of content
 
