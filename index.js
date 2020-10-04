@@ -1,5 +1,8 @@
 const inquirer = require('inquirer');
 const cleanData = require('./utils/dataCleaner');
+const write = require('./utils/export');
+const generateMarkdown = require('./src/generateMarkdown');
+
 
 const promptUserInfo = () => {
     console.log(`
@@ -88,4 +91,9 @@ const promptUserInfo = () => {
 
 promptUserInfo()
     .then(cleanData)
-    .then(out => console.log(out))
+    .then(generateMarkdown)
+    .then(write)
+    .then(({message}) => console.log (message))
+    .catch(err => {
+        console.log(err);
+    });

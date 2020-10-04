@@ -5,44 +5,38 @@ module.exports = data => {
         projectData.name = projectName;
 
         // Add section name with their values
-        projectData.sections = {}
+        projectData.sections = []
         const {sections} = projectData;
 
         // Check each fields to add to sections
         if (description) {
-            sections.description={};
-            sections.description.name = 'Description';
-            sections.description.value= description
-        }
-
-        if (license) {
-            sections.license={};
-            sections.license.name = 'License';
-            sections.license.value= license
+            const data = ['Description',description];
+            sections.push(data);
         }
         
         if (installation) {
-            sections.installation={};
-            sections.installation.name = 'Installation';
-            sections.installation.value= installation
-        }
-        
-        if (usage) {
-            sections.usage={};
-            sections.usage.name = 'Usage';
-            sections.usage.value= usage
-        }
-        
-        if (contributing) {
-            sections.contributing={};
-            sections.contributing.name = 'Contributing';
-            sections.contributing.value= contributing
+            const data = ['Installation',installation];
+            sections.push(data);
         }
 
+        if (usage) {
+            const data = ['Usage',usage];
+            sections.push(data);
+        }
+        
         if (tests) {
-            sections.tests={};
-            sections.tests.name = 'Tests';
-            sections.tests.value= tests
+            const data = ['Tests',tests];
+            sections.push(data);
+        }
+
+        if (contributing) {
+            const data = ['Contributing',contributing];
+            sections.push(data);
+        }
+       
+        if (license) {
+            const data = ['License',license];
+            sections.push(data);
         }
         // Add contact object if no field is empty, check each case for empty string
         if (github || email || contactInfo ){
