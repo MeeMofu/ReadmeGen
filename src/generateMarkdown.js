@@ -3,7 +3,7 @@ const returnLicence = require ('../utils/licenceLookup')
 const exampleCase = {
   name: 'README Generator example',
   sections: [
-    [ 'Description', 'This is a quick show case of the README that this program generate. This program will automatically generate table of content and its appropriate sections. Unrequired fields can be left empty and will not be included. In this example, the Installation and Tests are not included ' ],
+    [ 'Description', 'This is a quick show case of a README that this program generate. This program will automatically generate table of content and its appropriate sections. Unrequired fields can be left empty and will not be included. In this example, the Installation and Tests are not included ' ],
     [ 'Usage', 'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.' ],
     [ 'Contributing', 'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.' ],
     [ 'License', 'MIT License' ]
@@ -17,11 +17,14 @@ const exampleCase = {
 // function to generate markdown for README
 function generateMarkdown({name,sections,contact}) {
   if (name === 'Test Case'){
+    // Switch to special case if the project name is 'Test Case'
     name = exampleCase.name;
     sections = exampleCase.sections;
     contact = exampleCase.contact;
   }
   const badge = returnLicence(sections[sections.length-1][1])
+
+  // ===== Function to generate Table of Content ===== 
   const createTable = ()=>{
     let table = sections.map(section => `* [${section[0]}](#${section[0].toLowerCase()})`)
       .join('\n');
@@ -32,6 +35,7 @@ function generateMarkdown({name,sections,contact}) {
     return table;
   }
   
+  // ===== Function to generate the main contents ===== 
   const createContent = () =>{
     // For simple creation of the README, the licence and questions info comes after other sections, as they are the most different
     let mainContent = sections.filter(field => field[0] != 'License').map(content => `
@@ -62,6 +66,7 @@ function generateMarkdown({name,sections,contact}) {
     return mainContent;
   }
 
+  // ===== The main template of the README =====
   const Markdown = `# ${name}
   ${badge}
   
@@ -71,6 +76,7 @@ function generateMarkdown({name,sections,contact}) {
 
   ${createContent()}
 `;
+
   const cleaned = Markdown.split('\n').map(line => line.trim()).join('\n');
   // Clear any spaces before each line by:
     // First, split the data into arrays of lines

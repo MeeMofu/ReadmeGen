@@ -22,7 +22,6 @@ module.exports = str => {
 
     for (let i =0;i<base.length;i++){
         if (base[i]===str){
-            console.log(badgeResult[i]);
             const badge = badgeResult[i];
             return badge;
         }
