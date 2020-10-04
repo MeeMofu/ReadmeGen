@@ -4,23 +4,28 @@
 ## Table of content
 
 * [Description](#description)
+* [Installation](#installation)
 * [Usage](#usage)
-* [Contributing](#contributing)
+* [Tests](#tests)
 * [License](#license)
 * [Questions](#questions)
 
 
 ## Description
 
-This is a quick show case of the README that this program generate. This program will automatically generate table of content and its appropriate sections. Unrequired fields can be left empty and will not be included. In this example, the Installation and Tests are not included
+a
+
+## Installation
+
+a
 
 ## Usage
 
-Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.
+a
 
-## Contributing
+## Tests
 
-Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.
+a
 
 ## License
 
@@ -30,4 +35,4 @@ This program is covered under MIT License
 
 GitHub link: https://github.com/MeeMofu
 
-Extra contact info and/or instructions can be provided right here for users
+Feel free to leave an issue

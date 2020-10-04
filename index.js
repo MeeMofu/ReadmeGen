@@ -13,7 +13,6 @@ const promptUserInfo = () => {
     =============================
 
 *Usuage tip: Empty fields will not be included in the README, so you can skip unless required
-
     `);
 
     return inquirer.prompt([
